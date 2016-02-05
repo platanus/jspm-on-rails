@@ -19,7 +19,6 @@ group :production do
   gem 'unicorn'
 end
 
-
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
@@ -28,7 +27,6 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem 'rspec-nc', require: false
 end
-
 
 group :test do
   gem 'shoulda-matchers', require: false
