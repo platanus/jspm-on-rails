@@ -8,19 +8,17 @@ Bundler.require(*Rails.groups)
 
 module JspmOnRails
   class Application < Rails::Application
-    
-      # Enables CORS for all requests
-      config.middleware.insert_before 0, "Rack::Cors" do
-        allow do
-          origins '*'
-          resource '*',
-            :headers => :any,
-            :expose  => ['X-Page', 'X-PageTotal'],
-            :methods => [:get, :post, :delete, :put, :options]
-        end
+    # Enables CORS for all requests
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '*',
+          headers: :any,
+          expose: ['X-Page', 'X-PageTotal'],
+          methods: [:get, :post, :delete, :put, :options]
       end
-  
-    config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
+    end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

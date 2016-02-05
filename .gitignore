@@ -17,4 +17,6 @@
 /tmp
 .rbenv-vars
 .powder
-vendor/assets/bower_components
+public/jspm_packages/
+app/assets/javascripts/build.js
+node_modules/
