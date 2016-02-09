@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.x.client_side.use_production_build = false
+  config.x.client_side.use_production_build = true
 
   # Code is not reloaded between requests.
   config.cache_classes = true

@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <title>JspmOnRails</title>
-  <%= stylesheet_link_tag 'application', media: 'all' %>
-  <%= javascript_include_tag "/jspm_packages/system.js" %>
-  <%= javascript_include_tag "/config.js" %>
+  <%= stylesheet_link_tag "application", media: "all" %>
   <% if Rails.configuration.x.client_side.use_production_build %>
-    <%= javascript_include_tag 'build' %>
+    <%= javascript_include_tag "production-app" %>
+  <% else %>
+    <%= javascript_include_tag "development-app" %>
   <% end %>
   <script type="text/javascript">
     System.import("app/bootstrap");
